@@ -1,0 +1,20 @@
+version: '3'
+services:
+  private-browser:
+    build:
+      context: .
+      args:
+        CACHEBUST: ${CACHEBUST:-1}
+    image: private-browser
+    container_name: private-browser
+    ports:
+      - "6080:6080"
+      - "4713:4713"
+    environment:
+      - RESOLUTION=1920x1080
+    # volumes:
+    #   - ./keepass:/home/user/keepass:ro
+    #   - ./Downloads:/home/user/Downloads
+    devices:
+      - /dev/snd:/dev/snd
+    restart: unless-stopped
