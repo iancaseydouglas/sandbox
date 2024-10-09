@@ -17,7 +17,6 @@ RUN mkdir -p /home/user/keepass /home/user/Downloads
 
 COPY start-environment.sh /home/user/start-environment.sh
 COPY update-ublock.sh /home/user/update-ublock.sh
-RUN chmod +x /home/user/start-environment.sh /home/user/update-ublock.sh
 
 EXPOSE 6080 4713
 
